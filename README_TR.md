@@ -77,7 +77,9 @@ Veri, yarışma kuralları gereği bu depoda yer almıyor. `train.csv` dosyasın
 
 ## AI destekli çalışma süreci
 
-Bu proje, Claude bir AI eşli programlama asistanı olarak kullanılarak geliştirildi. Kod ve açıklama taslaklarını AI hazırladı; ben her adımı çalıştırdım, çıktıları beklentilerle karşılaştırdım ve mantıklı görünmeyen sonuçları sorguladım. Yukarıdaki ayın günü hatası buna bir örnek: Sonuç yanlış göründü, tanı kontrolleri çalıştırdım, kök nedeni buldum ve devam etmeden önce düzelttim.
+Bu proje, modern veri ekiplerinin çalıştığı şekilde, Claude bir AI eşli programlama asistanı olarak kullanılarak geliştirildi. Benim odağım doğrulamaydı: Her adımı çalıştırmak, her çıktıyı beklentiler ve alan mantığıyla karşılaştırmak, mantıklı görünmeyen sonuçlara güvenmeden önce onları sorgulamak.
+
+Örnek: Bir kod değişikliğinden sonra MAE iyileşmek yerine 8,31'den 10,74'e çıktı. Bunu bir uyarı işareti olarak gördüm, tanı kontrolleri çalıştırdım (satır sayıları, eksik değerler, örnek satırlar), kök nedeni buldum (haftanın günü, ayın günü olarak hesaplanmıştı) ve düzelttim. MAE 6,41'e indi.
 
 ## Yazar
 
