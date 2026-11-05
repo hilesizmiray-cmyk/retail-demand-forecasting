@@ -1,6 +1,7 @@
 # retail-demand-forecasting
 # Retail Demand Forecasting & Stock Recommendation
 🇹🇷 [Türkçe versiyon](README_TR.md)
+
 Forecasting daily item-level sales across 10 stores and 50 items, and turning the forecast into weekly stock recommendations that are backtested against actual demand.
 
 **Result:** a log-linear regression model reduces forecast error by **30%** versus a seasonal-naive baseline (MAE 8.35 → 5.85), and the resulting stock recommendation covers demand in **98.3%** of store-item-weeks against a 95% target.
@@ -78,7 +79,9 @@ The data is not included in this repository (competition rules). Download `train
 
 ## AI-assisted workflow
 
-This project was built with Claude as an AI pair programmer. The AI drafted code and explanations; I ran every step, checked the outputs against expectations, and questioned results that did not make sense. The day-of-month bug above is an example: the result looked wrong, so I ran diagnostic checks, traced the root cause and corrected it before moving on.
+This project was developed with Claude as an AI pair programmer — the same way modern data teams work. My focus was on validation: running every step, checking each output against expectations and domain logic, and challenging results that did not make sense before relying on them.
+
+Example: after a code change, MAE jumped from 8.31 to 10.74 instead of improving. I treated this as a red flag, ran diagnostic checks (row counts, nulls, sample rows), traced the root cause (weekday computed as day-of-month) and fixed it — bringing MAE to 6.41.
 
 ## Author
 
